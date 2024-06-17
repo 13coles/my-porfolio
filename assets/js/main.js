@@ -183,16 +183,52 @@
 
   });
 
+   /**
+   * Initiate portfolio lightbox 
+   */
+   const portfolioLightbox = GLightbox({
+    selector: '.portfolio-lightbox'
+  });
+  new Swiper('.portfolio-details-slider', {
+    speed: 400,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    }
+  });
 /**
    * Touch Scroll on Certificates sections
    */
   var swiper = new Swiper('.certificate-container', {
+    speed: 600,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false
+    },
     slidesPerView: 3, 
     spaceBetween: 30,
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
     },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 20
+      },
+
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 20
+      }
+    }
   });
 
 
